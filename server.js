@@ -106,21 +106,24 @@ app.post('/login', (req, res) => {
     const table = userType === 'nRadio' ? 'nUsers' : 'pUsers';
     const emailColumn = userType === 'nRadio' ? 'nEmail' : 'pEmail';
     const passwordColumn = userType === 'nRadio' ? 'nPassword' : 'pPassword';
+    const idColumn = userType === 'nRadio' ? 'nId' : 'pId'; // Seleccionar la columna de ID correcta
 
-    db.get(`SELECT pId, ${passwordColumn} FROM ${table} WHERE ${emailColumn} = ?`, [email], (err, row) => {
+    db.get(`SELECT ${idColumn}, ${passwordColumn} FROM ${table} WHERE ${emailColumn} = ?`, [email], (err, row) => {
         if (err) {
+            console.error('Error al buscar en la base de datos:', err.message);
             return res.status(500).json({ error: 'Error al buscar en la base de datos' });
         }
         if (row) {
             bcrypt.compare(password, row[passwordColumn], (err, result) => {
                 if (err) {
-                    return res.status(500).json({ error: 'Error al comparar contraseñas', details: err.message });
+                    console.error('Error al comparar contraseñas:', err.message);
+                    return res.status(500).json({ error: 'Error al comparar contraseñas' });
                 }
                 if (result) {
                     const tokenPayload = {
                         email,
                         userType,
-                        pId: row.pId // Incluir pId en el token payload
+                        pId: row[idColumn] // Incluir el ID correspondiente en el token payload
                     };
                     const token = jwt.sign(tokenPayload, 'secret_key', { expiresIn: '1h' }); // Generar token JWT
 
@@ -159,64 +162,22 @@ app.get('/profile', verifyToken, (req, res) => {
     res.json({ pId });
 });
 
-// Ruta para buscar profesionales
-app.post('/search', (req, res) => {
-    const { specialty, socialWork } = req.body;
-
-    let query = 'SELECT * FROM pData WHERE 1=1';
-    let params = [];
-
-    if (specialty) {
-        query += ' AND pDataSpecialty = ?';
-        params.push(specialty);
-    }
-
-    if (socialWork) {
-        query += ' AND pDataSocialWork = ?';
-        params.push(socialWork);
-    }
-
-    db.all(query, params, (err, rows) => {
-        if (err) {
-            return res.status(500).json({ error: 'Error al realizar la búsqueda en la base de datos' });
-        }
-        console.log("Resultados de la búsqueda:", rows);
-        res.json(rows);
-    });
-});
-
-
 
 //----------------------------------------------------------------------------------------------
 
 //--------------------------------------------Search--------------------------------------------
 
-app.post('/search', (req, res) => {
-    const { specialty, socialWork } = req.body;
-
-    // Consulta a la base de datos para buscar coincidencias
-    let query = 'SELECT * FROM pData WHERE 1=1';
-    let params = [];
-
-    if (specialty) {
-        query += ' AND pDataSpecialty = ?';
-        params.push(specialty);
-    }
-
-    if (socialWork) {
-        query += ' AND pDataSocialWork = ?';
-        params.push(socialWork);
-    }
-
-
-    db.all(query, params, (err, rows) => {
+// Ruta para obtener todos los datos de la tabla pData
+app.get('/search/all', (req, res) => {
+    db.all('SELECT * FROM pData', (err, rows) => {
         if (err) {
-            return res.status(500).json({ error: 'Error al realizar la búsqueda en la base de datos' });
+            return res.status(500).json({ error: 'Error al obtener todos los datos de la tabla pData', details: err.message });
         }
-        console.log("Resultados de la búsqueda:", rows);
-        res.json(rows); // Enviar resultados como respuesta
+        console.log("Todos los datos de la tabla pData:", rows);
+        res.json(rows); // Asegúrate de que se esté enviando correctamente como JSON
     });
 });
+
 //----------------------------------------------------------------------------------------------
 
 //--------------------------------------------Profile-------------------------------------------

@@ -10,18 +10,13 @@ const Searcher = () => {
     const socialWorks = ['-','Ninguna', 'Varias', 'Osde', 'Swiss Medical', 'Galeno', 'SanCorSalud'];
 
     const search = () => {
-        // Hacer la solicitud al backend
-        fetch('/search', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                specialty: selectedSpecialty === '-' ? null : selectedSpecialty,
-                socialWork: selectedSocialWork === '-' ? null : selectedSocialWork,
-            })
+        fetch('/search/all')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Error al obtener los datos');
+            }
+            return response.json();
         })
-        .then(response => response.json())
         .then(data => {
             console.log("Resultados de la búsqueda:", data);
         })
