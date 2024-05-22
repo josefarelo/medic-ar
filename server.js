@@ -167,14 +167,29 @@ app.get('/profile', verifyToken, (req, res) => {
 
 //--------------------------------------------Search--------------------------------------------
 
-// Ruta para obtener todos los datos de la tabla pData
-app.get('/search/all', (req, res) => {
-    db.all('SELECT * FROM pData', (err, rows) => {
+// Ruta para búsqueda de profesionales
+app.post('/search', (req, res) => {
+    const { specialty, socialWork } = req.body;
+    let query = 'SELECT * FROM pData WHERE 1=1';
+    const params = [];
+
+    if (specialty && specialty !== '-') {
+        query += ' AND pDataSpecialty = ?';
+        params.push(specialty);
+    }
+
+    if (socialWork && socialWork !== '-') {
+        query += ' AND pDataSocialWork = ?';
+        params.push(socialWork);
+    }
+
+    db.all(query, params, (err, rows) => {
         if (err) {
-            return res.status(500).json({ error: 'Error al obtener todos los datos de la tabla pData', details: err.message });
+            console.error('Error en la consulta:', err.message);
+            return res.status(500).json({ error: 'Error en la consulta a la base de datos' });
         }
-        console.log("Todos los datos de la tabla pData:", rows);
-        res.json(rows); // Asegúrate de que se esté enviando correctamente como JSON
+        console.log(rows); // Mostrar los resultados en la consola del servidor
+        res.json(rows);
     });
 });
 
