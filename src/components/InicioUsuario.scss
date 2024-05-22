@@ -1,0 +1,55 @@
+
+    .main-visual-container {
+        width: 101vw;
+        height: 55vh;
+
+        .medic-search-img {
+            display: flex;
+            width: 100%;
+            height: 100%;
+        }
+
+        .searcher-container  {
+            margin-top: -23%;
+            margin-left: -15%;
+        }
+    }
+
+    .search-result-title {
+        background-color: rgb(55, 178, 209);
+        margin-top: 2%;
+        margin-left: 20%;
+        width: 22vw;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        .search-result-text {
+            margin-bottom: 0%;
+            text-align: center;
+            vertical-align: center;
+            color: white;
+            font-size: 1.9vmin;
+            padding: 1.6%;
+        }
+    }
+    .search-results-container {
+        display: flex;
+        justify-content: space-evenly;
+        width: 101vw;
+        height: 100vh;
+        background-color: white;
+        margin-bottom: 5%;
+        padding: 5% 0;
+        border-top: 3px solid rgb(55, 178, 209);
+
+        .profesional-results {
+            width: 50vw;
+            height: 100vh;
+            border: 2px solid rgb(55, 178, 209);
+            border-radius: 5px;
+        }
+
+        .map-container {
+            width: 40vw;
+            height: 70vh;
+        }
+    }

@@ -1,0 +1,125 @@
+.main-signup {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 140vh;
+
+    .sign-up-container {
+        width: 25%;
+        height: 85%;
+        background: #F8F9FD;
+        background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(244, 247, 251) 100%);
+        border-radius: 40px;
+        padding: 25px 35px;
+        border: 5px solid rgb(255, 255, 255);
+        box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 30px 30px -20px;
+        margin: 20px;
+
+
+        .heading {
+            padding-top: 10%;
+            text-align: center;
+            font-weight: 900;
+            font-size: 4.1vmin;
+            color: rgb(63, 163, 245);
+        }
+
+        .signup-form {
+            margin-top: 10%;
+            margin-bottom: 5%;
+
+            .dni-birth-container {
+                display: flex;
+                justify-content: space-evenly;  
+                #birthday {
+                    color: rgb(170, 170, 170);
+                    width: 45%;
+                    margin-left: 5%;
+                }
+            }
+
+            .input-form {
+                width: 90%;
+                background: white;
+                border: none;
+                padding: 5% 5%;
+                border-radius: 20px;
+                margin-top: 5%;
+                font-size: 1.5vmin;
+                box-shadow: #cff0ff 0px 10px 10px -5px;
+                border-inline: 2px solid transparent;
+        
+                &::-moz-placeholder {
+                    color: rgb(170, 170, 170);
+                }
+
+                &::placeholder {
+                    color: rgb(170, 170, 170);
+                }
+                
+                &:focus {
+                    outline: none;
+                    border-inline: 2px solid #12B1D1;
+                }           
+            }
+
+            .signup-button {
+                display: block;
+                width: 100%;
+                font-size: 1.6vmin;
+                font-weight: bold;
+                background: linear-gradient(45deg, rgb(16, 137, 211) 0%, rgb(18, 177, 209) 100%);
+                color: white;
+                padding-block: 15px;
+                margin: 10% auto;
+                border-radius: 20px;
+                box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 20px 10px -15px;
+                border: none;
+                transition: all 0.2s ease-in-out;
+        
+                &:hover {
+                    transform: scale(1.02);
+                    box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 23px 10px -20px;
+                }
+
+                &:active {
+                    transform: scale(0.95);
+                    box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 15px 10px -10px;
+                }
+            }
+        
+        }
+
+        .have-acc-container {
+            margin-top: 7%;
+
+            .have-acc-title {
+                display: block;
+                text-align: center;
+                font-size: 1.3vmin;
+                color: rgb(170, 170, 170);
+            }
+
+            .have-acc-link { 
+                display: block;
+                text-align: center;
+                font-size: 1.35vmin;
+                color: #0077c7;
+                text-decoration: none;
+            }  
+        }
+
+
+        .polit-container {
+            display: block;
+            text-align: center;
+            margin-top: 7%;
+
+            .polit-link {
+                text-decoration: none;
+                color: #0099ff;
+                font-size: 1.3vmin;
+            }
+        }
+    }
+}

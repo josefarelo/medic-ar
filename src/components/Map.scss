@@ -1,0 +1,17 @@
+.map-container {
+    width: 40%;
+    background-color: darkgray;
+    border: 2.5px solid rgb(55, 178, 209);
+    border-radius: 5px;
+
+    .location-marker-icon {
+        color: dodgerblue;
+        font-size: 32px;
+        margin: 0 0 6px 4px;
+    }
+    .leaflet-div-icon {
+        font-size: 32px;
+        background: transparent;
+        border: none;
+    }
+}

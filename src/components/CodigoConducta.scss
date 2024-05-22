@@ -1,0 +1,42 @@
+$color-main: rgb(63, 163, 245);
+$color-conducta-subtitle: rgb(56, 212, 240);
+$color-conducta-text: rgb(2, 84, 151);
+
+
+
+.conducta-main {
+    height: 100%;
+    padding: 4% 0;
+    padding-bottom: 6%;
+    
+    .conducta-title {
+        font-size: 4.2vmin;
+        color: $color-main;
+        padding: 0 5%;
+    }
+
+    .conducta-subtitle {
+        font-size: 3.2vmin;
+        color: $color-conducta-subtitle;
+        padding: 0 5%;
+        padding-bottom: 4%;
+    }
+
+    .conducta-third-title {
+        font-size: 2.8vmin;
+        color: $color-conducta-subtitle;
+        padding: 0 10%;
+    }
+
+    .conducta-fourth-title {
+        font-size: 1.9vmin;
+        font-weight: 600;
+        color: $color-conducta-subtitle;
+    }
+
+    .conducta-text {
+        font-size: 1.8vmin;
+        padding: 0 10%;
+        color: $color-conducta-text;
+    }
+}

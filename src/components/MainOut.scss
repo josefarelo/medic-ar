@@ -1,0 +1,156 @@
+$color-main: rgb(63, 163, 245);
+$color-main-shadow: rgba(56, 157, 240, 0.322);
+$color-main-hover: rgb(55, 140, 209);
+$color-secondary: rgb(245, 244, 244);
+$color-links: rgb(59, 59, 59);
+$color-links-2: rgb(41, 41, 41);
+$color-links-hover: rgb(20, 20, 20);
+$color-button-hover: rgb(43, 195, 236);
+$color-button-active: rgb(47, 163, 196);
+$color-background: rgb(243, 243, 243);
+
+
+* {
+  scroll-behavior: smooth; 
+}
+
+body { 
+  background-color: $color-background;
+  width: 101vw;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: 0;
+    margin-left: -8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #e1e1e138;
+    border-radius: 4px;
+
+    &::-webkit-scrollbar-track:hover, &::-webkit-scrollbar-track:active {
+      background: #d4d4d4;
+    }
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+
+    &:hover {
+      background: #b3b3b3;
+      box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+    }
+
+    &:active {      
+      background-color: #999999;
+    }
+  }
+}
+
+.app-main {
+  height: 100%;
+  width: 101vw;
+  margin-bottom: 12%;
+  background-color: rgb(243, 243, 243);
+  
+  .button-container {
+    margin-right: 2%;
+
+    button {
+      float: right;
+      padding: 12.5px 20px;
+      margin: 5% 0;
+      margin-right: 2%;
+      border: 0;
+      border-radius: 100px;
+      background-color: rgb(40, 185, 224);
+      color: #ffffff;
+      font-weight: Bold;
+      transition: all 0.5s;
+      -webkit-transition: all 0.5s;
+      cursor: pointer;
+
+        .button-link {
+          text-decoration: none;
+          color: #ffffff;
+        }
+  
+      &:hover {
+        background-color: $color-button-hover;
+        transform: scale(1.05)
+      }
+  
+      &:active {
+        background-color: $color-button-active;
+        transition: all 0.25s;
+        -webkit-transition: all 0.25s;
+        box-shadow: none;
+        transform: scale(0.98);
+      }
+
+      .button-icon {
+        padding-right: 1vmin;
+      }  
+    }
+  }
+
+
+
+
+  .title-container {
+    padding-top: 4.5%;
+    padding-bottom: 3.5%;
+    padding-left: 3%;
+    background-color: rgba(235, 235, 235, 0.568);
+
+    .title {
+      color: rgb(23, 115, 131);
+      margin: 0;
+      font-size: 1.7vmax;
+    }
+
+    .second-title {
+      color: rgb(56, 212, 240);
+      margin: 0;
+      font-size: 1.45vmax;
+    }
+  }
+
+
+
+
+  .center-container {
+    display: flex;
+
+    .imagen-inicio {
+      width: 53%;
+      height: 50%;
+      
+    }
+  
+    .main-text {
+      width: 30vw;
+      height: 50vh;
+      margin-left: 7%;
+      margin-top: 2%;
+
+      .text-top {
+        font-size: 1.6vmax;
+        padding-bottom: 2.5vmin;
+        color: $color-main-hover;
+      }
+
+      .text-mid {
+        font-size: 1.4vmax;
+        color: rgba(56, 157, 240, 0.753);
+      }
+
+      .text-bot {
+        font-size: 1.48vmax;
+        color: rgb(28, 201, 224);
+        padding-top: 2vmin;
+      }
+    }
+  }
+}
