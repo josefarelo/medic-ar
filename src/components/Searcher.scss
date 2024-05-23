@@ -60,4 +60,21 @@
                 background-color: rgb(0, 155, 160);
             }
         }
+
+        .results-table {
+            color: rgb(77, 76, 76);
+            font-size: 1rem;
+            margin-top: 12%;
+            margin-left: 17%;
+
+            th, td {
+                padding: 5px;
+                text-align: center;
+            }
+        
+            th {
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+        }
     }

@@ -35,32 +35,6 @@ export default function InicioUsuario() {
             </div>
             <div className='search-results-container'>
                 <div className='profesional-results'>
-                    {searchResults.length > 0 && (
-                        <table className='results-table'>
-                            <thead>
-                                <tr>
-                                    <th>Nombre</th>
-                                    <th>Apellido</th>
-                                    <th>Especialidad</th>
-                                    <th>Obra Social</th>
-                                    <th>Dirección</th>
-                                    <th>Puntuación</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {searchResults.map((result) => (
-                                    <tr key={result.pId}>
-                                        <td>{result.pDataName}</td>
-                                        <td>{result.pDataSurname}</td>
-                                        <td>{result.pDataSpecialty}</td>
-                                        <td>{result.pDataSocialWork}</td>
-                                        <td>{result.pDataAddress}</td>
-                                        <td>{result.pDataScore}</td>
-                                    </tr>
-                                ))}
-                            </tbody>
-                        </table>
-                    )}
                 </div>
                 <div className='main-map-container'>
                     <Map />
