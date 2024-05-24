@@ -36,6 +36,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "start:both": "concurrently \"npm start\" \"node server.js\"",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -60,6 +61,7 @@
     ]
   },
   "devDependencies": {
+    "concurrently": "^8.2.2",
     "nodemon": "^3.1.0"
   }
 }
