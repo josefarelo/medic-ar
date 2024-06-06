@@ -9,14 +9,30 @@ $color-button-hover: rgb(43, 195, 236);
 $color-button-active: rgb(47, 163, 196);
 $color-background: rgb(243, 243, 243);
 
+$breakpoint-small: 600px;
+$breakpoint-medium: 768px;
+$breakpoint-large: 1024px;
+$breakpoint-xlarge: 1360px;
 
-* {
-  scroll-behavior: smooth; 
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == small {
+    @media (max-width: $breakpoint-small) { @content; }
+  } @else if $breakpoint == medium {
+    @media (max-width: $breakpoint-medium) { @content; }
+  } @else if $breakpoint == large {
+    @media (max-width: $breakpoint-large) { @content; }
+  } @else if $breakpoint == xlarge {
+    @media (max-width: $breakpoint-xlarge) { @content; }
+  }
 }
 
-body { 
+* {
+  scroll-behavior: smooth;
+}
+
+body {
   background-color: $color-background;
-  width: 101vw;
+  width: 100%;
 
   &::-webkit-scrollbar {
     width: 8px;
@@ -42,7 +58,7 @@ body {
       box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
     }
 
-    &:active {      
+    &:active {
       background-color: #999999;
     }
   }
@@ -50,12 +66,21 @@ body {
 
 .app-main {
   height: 100%;
-  width: 101vw;
+  width: 100%;
   margin-bottom: 12%;
   background-color: rgb(243, 243, 243);
-  
+
+  @include respond-to(small) {
+    margin-bottom: 5%;
+  }
+
   .button-container {
     margin-right: 2%;
+
+    @include respond-to(small) {
+      margin-right: 0;
+      text-align: center;
+    }
 
     button {
       float: right;
@@ -71,16 +96,21 @@ body {
       -webkit-transition: all 0.5s;
       cursor: pointer;
 
-        .button-link {
-          text-decoration: none;
-          color: #ffffff;
-        }
-  
+      @include respond-to(small) {
+        float: none;
+        margin: 5% auto;
+      }
+
+      .button-link {
+        text-decoration: none;
+        color: #ffffff;
+      }
+
       &:hover {
         background-color: $color-button-hover;
-        transform: scale(1.05)
+        transform: scale(1.05);
       }
-  
+
       &:active {
         background-color: $color-button-active;
         transition: all 0.25s;
@@ -91,12 +121,9 @@ body {
 
       .button-icon {
         padding-right: 1vmin;
-      }  
+      }
     }
   }
-
-
-
 
   .title-container {
     padding-top: 4.5%;
@@ -104,52 +131,90 @@ body {
     padding-left: 3%;
     background-color: rgba(235, 235, 235, 0.568);
 
+    @include respond-to(small) {
+      text-align: center;
+      padding: 4% 2%;
+    }
+
     .title {
       color: rgb(23, 115, 131);
       margin: 0;
       font-size: 1.7vmax;
+
+      @include respond-to(small) {
+        font-size: 2.5vmax;
+      }
     }
 
     .second-title {
       color: rgb(56, 212, 240);
       margin: 0;
       font-size: 1.45vmax;
+
+      @include respond-to(small) {
+        font-size: 2.2vmax;
+      }
     }
   }
 
-
-
-
   .center-container {
     display: flex;
+    flex-wrap: wrap;
 
     .imagen-inicio {
       width: 53%;
       height: 50%;
-      
+
+      @include respond-to(small) {
+        width: 100%;
+        height: auto;
+      }
     }
-  
+
     .main-text {
       width: 30vw;
       height: 50vh;
       margin-left: 7%;
       margin-top: 2%;
+    
+      @media (max-width: 1360px) {
+        width: 25vw;
+        margin-left: 12%;
+      } 
+
+      @include respond-to(small) {
+        width: 90%;
+        margin-left: 0;
+        margin-top: 5%;
+      }
 
       .text-top {
         font-size: 1.6vmax;
         padding-bottom: 2.5vmin;
         color: $color-main-hover;
+
+        @include respond-to(small) {
+          font-size: 2.5vmax;
+        }
       }
 
       .text-mid {
         font-size: 1.4vmax;
         color: rgba(56, 157, 240, 0.753);
+
+        @include respond-to(small) {
+          font-size: 2.2vmax;
+        }
       }
 
       .text-bot {
         font-size: 1.48vmax;
         color: rgb(28, 201, 224);
         padding-top: 2vmin;
+
+        @include respond-to(small) {
+          font-size: 2.4vmax;
+        }
       }
     }
   }

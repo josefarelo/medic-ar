@@ -7,8 +7,6 @@ $color-secondary: rgb(218, 218, 218);
 $color-links: rgb(59, 59, 59);
 $color-hover-link: rgb(77, 205, 255);
 
-
-
 nav{
     height: 10vh;
     display: flex;
@@ -22,7 +20,7 @@ nav{
     font-style: normal;
 
     .logo-container {
-        width: 3.7vw;
+        width: 3.8vw;
         height: 8vh;
         margin-top: 1.25vh;
         margin-left: 4.7vw;
@@ -60,6 +58,66 @@ nav{
                 background-color: rgb(64, 159, 236);
             }       
         }    
+    }
+
+    @media (max-width: 1360px) {
+        .logo-container {
+            width: 4vw;
+        }
+
+        .nav-out-links {
+            .nav-out-li {
+                padding: 0 2em;
+                .nav-out-link {
+                    font-size: 1.15rem;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1024px) {
+        .logo-container {
+            width: 7vw;
+        }
+
+        .nav-out-links {
+            .nav-out-li {
+                padding: 0 1em;
+                .nav-out-link {
+                    font-size: 1.1rem;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .logo-container {
+            width: 10vw;
+        }
+
+        .nav-out-links {
+            .nav-out-li {
+                padding: 0 0.6em;
+                .nav-out-link {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 576px) {
+        .logo-container {
+            width: 12vw;
+        }
+
+        .nav-out-links {
+            .nav-out-li {
+                padding: 0 0.3em;
+                .nav-out-link {
+                    font-size: 0.7rem;
+                }
+            }
+        }
     }
 
 }

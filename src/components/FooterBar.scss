@@ -30,7 +30,17 @@ footer {
             width: 130px;
             height: 130px;
             margin-top: 60px;
-            margin-left: 10%;  
+            margin-left: 10%;
+    
+            @media (max-width: 860px) {
+                width: 100px;
+                height: 100px;
+            }  
+    
+            @media (max-width: 560px) {
+                width: 80px;
+                height: 80px;
+            } 
         }
     
 
@@ -41,6 +51,10 @@ footer {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 10%;
+
+            @media (max-width: 860px) {
+                padding-left: 5vw;
+            }    
 
             ul {
                 list-style-type: none;  
@@ -56,13 +70,29 @@ footer {
                     padding: 0;
                     font-size: 18px;
                     font-weight: 700;
+
+                    @media (max-width: 860px) {
+                        font-size: 16px;
+                    }
+
+                    @media (max-width: 560px) {
+                        font-size: 14px;
+                    }         
                 }
 
                 .footer-link {
                     cursor: pointer;
                     line-height: 5px;
                     text-decoration: none;
-                    color: $color-main;  
+                    color: $color-main;
+
+                    @media (max-width: 860px) {
+                        font-size: 14px;
+                    }
+
+                    @media (max-width: 560px) {
+                        font-size: 12px;
+                    }       
                     
                     &:hover {
                         color: $color-hover-link;
@@ -86,5 +116,4 @@ footer {
             margin-right: 10px;
         }
     }
-    
 }
