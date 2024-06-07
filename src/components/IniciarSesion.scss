@@ -168,4 +168,72 @@
             }
         }
     }
+
+    @media (max-width: 1280px) {
+        .sign-in-container {
+            height: 70%;
+
+            .heading {
+                font-size: 3.9vmin;
+            }
+
+            .user-or-pro-radio {
+                font-size: 1.3vmin;
+            }
+        }
+    }
+
+    @media (max-width: 1080px) {
+        .sign-in-container {
+            height: 50%;
+
+            .heading {
+                font-size: 3.5vmin;
+                padding-top: 2%;
+            }
+            
+            .login-form {
+                .user-or-pro-radio {
+                    font-size: 1.1vmin;
+                }
+
+                #email, #password {
+                    height: 2%;
+                }
+
+                .login-button {
+                    font-size: 1.3vmin;
+                    padding: 10px;
+                    width: 45%;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 800px) {
+        .sign-in-container {
+            height: 43%;
+
+            .heading {
+                font-size: 3.2vmin;
+                padding: 0;
+            }
+            
+            .login-form {
+                .user-or-pro-radio {
+                    font-size: 1.1vmin;
+                    width: 50%;
+                    margin-left: 25%;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 480px) {
+        height: 70vh;
+        .sign-in-container {
+            height: 60%;
+            width: 40%;
+        }
+    }
 }

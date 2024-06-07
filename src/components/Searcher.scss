@@ -13,7 +13,6 @@
         }
 
         .dropdown {
-
             .p-searcher {
                 color: rgb(36, 127, 218);
                 font-size: 2vmin;
@@ -75,6 +74,63 @@
             th {
                 font-weight: bold;
                 text-transform: uppercase;
+            }
+        }
+
+        @media (max-width: 1280px) {
+            .searcher-title {
+                font-size: 3.5vmin;
+                margin-bottom: 2vmin;
+            }
+            .results-table {
+                position: absolute;
+                font-size: 0.63rem;
+                margin-top: 11%;
+                margin-left: 19.5%;
+            }
+        }
+
+        @media (max-width: 854px) {
+            .searcher-title {
+                font-size: 3.5vmin;
+                margin-bottom: 2vmin;
+            }
+            select {
+                font-size: 1.5vmin;
+            }
+            .search-btn {
+                font-size: 2vmin;
+                padding: 1vmin 1.8vmin;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .searcher-title {
+                font-size: 2.8vmin;
+                margin-top: -22%;
+                margin-bottom: 0;
+            }
+            .dropdown {
+                .p-searcher {
+                    margin: 0;
+                }
+            }
+            .search-btn {
+                margin: 0;
+                padding: 0.2vmin 1.2vmin;
+                font-size: 1.7vmin;
+            }
+            select {
+                padding: 0.3% 0.8%;
+            }
+            .results-table {
+                display: block;
+                margin-left: 17%;
+                margin-top: 15%;
+                th, td {
+                    padding: 1px;
+                    font-size: 1.7vmin;
+                }
             }
         }
     }

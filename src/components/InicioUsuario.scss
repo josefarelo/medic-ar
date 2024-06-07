@@ -13,6 +13,10 @@
             margin-top: -23%;
             margin-left: -15%;
         }
+
+        @media (max-width: 1280px) {
+            height: auto;
+        }
     }
 
     .search-result-title {
@@ -31,6 +35,7 @@
             padding: 1.6%;
         }
     }
+
     .search-results-container {
         display: flex;
         justify-content: space-evenly;
@@ -51,5 +56,20 @@
         .map-container {
             width: 40vw;
             height: 70vh;
+        }
+
+        @media (max-width: 480px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .profesional-results {
+                width: 97vw;
+                height: 60vh;
+                margin-bottom: 5%;
+            }
+            .map-container {
+                width: 97vw;
+                height: 40vh;
+            }
         }
     }
