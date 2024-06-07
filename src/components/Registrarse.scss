@@ -1,10 +1,27 @@
+$color-background: rgb(245, 244, 244);
+$color-first-title: rgb(82, 133, 175);
+$color-second-title: rgba(56, 157, 240, 0.753);
+$color-text: rgb(49, 49, 49);
+$color-main: rgb(63, 163, 245);
+$color-register-container: rgba(63, 163, 245, 0.76);
+
+$desktop: 1200px;
+$tablet: 768px;
+$mobile: 576px;
+
+body {
+    background-color: $color-background;
+}
+
 .main-signup {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     height: 140vh;
+    flex-wrap: wrap;
 
     .sign-up-container {
+        flex-wrap: wrap;
         width: 25%;
         height: 85%;
         background: #F8F9FD;
@@ -14,7 +31,6 @@
         border: 5px solid rgb(255, 255, 255);
         box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 30px 30px -20px;
         margin: 20px;
-
 
         .heading {
             padding-top: 10%;
@@ -30,7 +46,8 @@
 
             .dni-birth-container {
                 display: flex;
-                justify-content: space-evenly;  
+                justify-content: space-evenly;
+                
                 #birthday {
                     color: rgb(170, 170, 170);
                     width: 45%;
@@ -48,7 +65,7 @@
                 font-size: 1.5vmin;
                 box-shadow: #cff0ff 0px 10px 10px -5px;
                 border-inline: 2px solid transparent;
-        
+
                 &::-moz-placeholder {
                     color: rgb(170, 170, 170);
                 }
@@ -60,7 +77,7 @@
                 &:focus {
                     outline: none;
                     border-inline: 2px solid #12B1D1;
-                }           
+                }
             }
 
             .signup-button {
@@ -76,7 +93,7 @@
                 box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 20px 10px -15px;
                 border: none;
                 transition: all 0.2s ease-in-out;
-        
+
                 &:hover {
                     transform: scale(1.02);
                     box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 23px 10px -20px;
@@ -87,7 +104,6 @@
                     box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 15px 10px -10px;
                 }
             }
-        
         }
 
         .have-acc-container {
@@ -100,15 +116,14 @@
                 color: rgb(170, 170, 170);
             }
 
-            .have-acc-link { 
+            .have-acc-link {
                 display: block;
                 text-align: center;
                 font-size: 1.35vmin;
                 color: #0077c7;
                 text-decoration: none;
-            }  
+            }
         }
-
 
         .polit-container {
             display: block;
@@ -119,6 +134,82 @@
                 text-decoration: none;
                 color: #0099ff;
                 font-size: 1.3vmin;
+            }
+        }
+    }
+
+    @media (max-width: $desktop) {
+        .sign-up-container {
+            display: flex;
+            justify-content: center;
+            width: 25%;
+            height: 55%;
+            
+            .signup-form {
+                width: 100%;
+                margin: 0;
+            }
+            .heading {
+                font-size: 2rem;
+                padding: 10px;
+            }
+        }
+    }
+
+    @media (max-width: $tablet) {
+        .sign-up-container {
+            width: 40%;
+            height: 41%;
+            
+            .signup-form {
+                margin-top: -10%;
+
+                .input-form {
+                    height: 5px;
+                }
+
+                #passwordsForm {
+                    .signup-button {
+                        width: 100px;
+                        height: 30px;
+                        padding-bottom: 30px;
+                        margin: 10px;
+                        margin-left: 30%;
+                    }
+                }
+            }
+
+            .heading {
+                font-size: 1.4rem;
+                padding: 5px;
+                height: 15%;
+            }
+        }
+    }
+
+    @media (max-width: $mobile) {
+        .sign-up-container {
+            width: 60%;
+            height: 37%;
+            padding: 5%;
+            
+            .signup-form {
+                margin-top: -10%;
+
+                #passwordsForm {
+                    .signup-button {
+                        width: 80px;
+                        margin: 3%;
+                        margin-left: 30%;
+                        padding: 2px;
+                    }
+                }
+            }
+
+            .heading {
+                height: 3%;
+                margin-bottom: 6%;
+                font-size: 0.7rem;
             }
         }
     }

@@ -5,16 +5,19 @@ $color-text: rgb(49, 49, 49);
 $color-main: rgb(63, 163, 245);
 $color-register-container: rgba(63, 163, 245, 0.76);
 
+$desktop: 1200px;
+$tablet: 768px;
+$mobile: 576px;
+
 body {
     background-color: $color-background;
 }
 
-
 .conoce-medicar-container {
-
     .top-container {
         display: flex;
         justify-content: space-evenly;
+        flex-wrap: wrap; // Para que los elementos se ajusten en pantallas pequeñas
 
         .conociendo-container {
             display: flex;
@@ -42,7 +45,6 @@ body {
             }
 
             .desc-container {
-                align-self: start;
                 width: 50%;
                 padding: 15px;
 
@@ -67,11 +69,10 @@ body {
         }
     }
 
-
-
     .mid-container {
         display: flex;
         justify-content: center;
+        flex-wrap: wrap;
 
         .politicas-container {
             display: grid;
@@ -114,17 +115,17 @@ body {
         }   
     }
 
-
-
     .bot-container {
         height: 40vh;
         margin-bottom: 4%;
+        display: flex;
+        flex-direction: column;
 
         .register-container {
             position: relative;
             width: 20%;
             height: 50%;
-            margin-bottom: -15%;
+            margin-bottom: -20%;
             margin-left: 7%;
             padding: 1% 2%;
             color: #ffffff;
@@ -146,8 +147,8 @@ body {
                 font-size: 1.55vmin;
 
                 .registrarse-conoce-button {
-                color: #ffffff;
-                text-decoration: none;
+                    color: #ffffff;
+                    text-decoration: none;
                 }
             }
         }   
@@ -155,6 +156,7 @@ body {
         .bot-img-container {
             width: 100%;
             height: 100%;
+            margin-top: 5%;
 
             .bot-imagen-1 {
                 width: 100%;
@@ -163,5 +165,71 @@ body {
             }
         }
     }
-}
 
+    @media (max-width: $desktop) {
+        .top-container .conociendo-container,
+        .mid-container .politicas-container,
+        .bot-container .register-container {
+            width: 40vw;
+        }
+        .bot-container {
+            .register-container {
+                margin-bottom: -30%;
+                margin-left: 25%;
+            }
+        }
+    }
+
+    @media (max-width: $tablet) {
+        .top-container .conociendo-container,
+        .mid-container .politicas-container,
+        .bot-container .register-container {
+            width: 60vw;
+            flex-direction: column;
+        }
+        .top-container {
+            .conociendo-container {
+                .img-container {    
+                    width: 100%;
+                    height: 45%;            
+                    .top-imagen-1, .top-imagen-2, .top-imagen-3 {
+                        object-fit: cover;
+                        border: none;
+                        border-bottom-left-radius: 0;
+                        border-top-right-radius: 37px;
+                    }
+                }
+                .desc-container {
+                    width: 90%;
+                    height: 55%;
+                }
+            }
+        }
+        .bot-container {
+            .register-container {
+                width: 32%;
+                height: 40%;
+                margin-bottom: -41%;
+                margin-left: 30%;
+            }
+        }
+    }
+
+    @media (max-width: $mobile) {
+        .top-container .conociendo-container,
+        .mid-container .politicas-container,
+        .bot-container .register-container {
+            width: 80vw;
+            flex-direction: column;
+        }
+        .bot-container {
+            margin-top: 25%;
+            .register-container {
+                width: 50%;
+                height: 40%;
+                margin-bottom: -60%;
+                margin-left: 25%;
+            }
+        }
+    }
+}
