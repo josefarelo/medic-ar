@@ -1,10 +1,10 @@
 {
-  "name": "project",
+  "name": "medic-ar",
   "version": "1.2.13",
   "author": "Jose",
   "description": "Cartilla médica para cualquier usuario registrado que necesite buscar un profesional de la salud, ya se por localización, obra social o puntaje en base a la experiencia. Además es una opción para el médico que quiera darse a conocer y publicitar su trabajo",
   "private": true,
-  "homepage": "https://josefarelo.github.io/medicAR/",
+  "homepage": "https://josefarelo.github.io/medic-ar/",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
     "@fortawesome/free-brands-svg-icons": "^6.5.1",

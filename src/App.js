@@ -14,7 +14,7 @@ import ProtectedRoute from './components/ProtectedRoute';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route path="/" element={<MainOut />} />
         <Route path="/conoce-medicar" element={<ConoceMedicar />} />
