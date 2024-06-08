@@ -4,6 +4,7 @@
   "author": "Jose",
   "description": "Cartilla médica para cualquier usuario registrado que necesite buscar un profesional de la salud, ya se por localización, obra social o puntaje en base a la experiencia. Además es una opción para el médico que quiera darse a conocer y publicitar su trabajo",
   "private": true,
+  "homepage": "https://josefarelo.github.io/medicAR/",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
     "@fortawesome/free-brands-svg-icons": "^6.5.1",
@@ -40,7 +41,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -62,6 +65,7 @@
   },
   "devDependencies": {
     "concurrently": "^8.2.2",
+    "gh-pages": "^6.1.1",
     "nodemon": "^3.1.0"
   }
 }
