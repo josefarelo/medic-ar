@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/medicAR/static/css/main.e9d484ff.css",
+    "main.js": "/medicAR/static/js/main.bb771c55.js",
+    "static/js/453.5e560239.chunk.js": "/medicAR/static/js/453.5e560239.chunk.js",
+    "static/media/Conoce1.jpg": "/medicAR/static/media/Conoce1.b4369130f30fcbf8a5ab.jpg",
+    "static/media/imagenInicio.png": "/medicAR/static/media/imagenInicio.a58cfdc17ed322824cb4.png",
+    "static/media/Conoce2.jpg": "/medicAR/static/media/Conoce2.e2c14aa71a0ca5e51c0c.jpg",
+    "static/media/Conoce3.jpg": "/medicAR/static/media/Conoce3.33d6dffd3c6b56f95cde.jpg",
+    "static/media/Conoce4.jpg": "/medicAR/static/media/Conoce4.669540b51eb46cf74155.jpg",
+    "static/media/perfilP.jpg": "/medicAR/static/media/perfilP.951a7afe177ed9b463f2.jpg",
+    "static/media/docProfile.png": "/medicAR/static/media/docProfile.b73febe7da2f2215ba82.png",
+    "static/media/medicSearcherMain.jpg": "/medicAR/static/media/medicSearcherMain.aa52be8c1921bbf80870.jpg",
+    "static/media/turnosP.jpg": "/medicAR/static/media/turnosP.f66c4fa7f8452a8857ae.jpg",
+    "static/media/chatP.jpg": "/medicAR/static/media/chatP.690d6ebd470fc2e69910.jpg",
+    "static/media/historialesP.jpg": "/medicAR/static/media/historialesP.606a0a4a4829217093fc.jpg",
+    "static/media/logo.png": "/medicAR/static/media/logo.c9072125ca41a434e5bb.png",
+    "static/media/logoInv.png": "/medicAR/static/media/logoInv.00dd89cfa3c0a7bb99e5.png",
+    "index.html": "/medicAR/index.html",
+    "main.e9d484ff.css.map": "/medicAR/static/css/main.e9d484ff.css.map",
+    "main.bb771c55.js.map": "/medicAR/static/js/main.bb771c55.js.map",
+    "453.5e560239.chunk.js.map": "/medicAR/static/js/453.5e560239.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e9d484ff.css",
+    "static/js/main.bb771c55.js"
+  ]
+}
