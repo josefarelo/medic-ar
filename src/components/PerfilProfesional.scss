@@ -4,6 +4,10 @@
     margin-left: 10%;
     font-size: 2vmax;
     color: rgb(19, 196, 209);
+
+    @media (max-width: 480px) {
+        margin-top: 8%;
+    }
 }
 .professional-profile-subtitle{
     margin-left: 15%;
@@ -67,10 +71,11 @@
     }
 
     .profile-button-container {
+        position: absolute;
+        z-index: 1000;
         width: 10%;
         height: 10%;
-        margin-left: 90%;
-        margin-top: 6.5%;
+        margin-left: 63%;
 
         .save-profile-button{
             padding: 10%;
@@ -100,6 +105,74 @@
         #displayText {
             font-size: 1.8vmax;
             color: rgb(97, 165, 233);
+        }
+    }
+
+    @media (max-width: 1280px) {
+        .professional-profile-form {
+            .professional-profile-img-container{
+                height: 35%;
+            }
+        }
+
+        .display-text-container {
+            margin-top: -35%;
+            margin-left: 32%;
+        }
+    }
+
+    @media (max-width: 854px) {
+        .professional-profile-form {
+            .professional-profile-img-container{
+                height: 35%;
+            }
+        }
+
+        .display-text-container {
+            width: 65%;
+            margin-top: -40%;
+            margin-left: 32%;
+        }
+    }
+
+    @media (max-width: 480px) {
+        margin-top: 5%;
+        padding: 0;
+        margin-left: 10%;
+
+        .professional-profile-form {
+            width: 80vw;
+            height: 55vh;
+
+            .professional-profile-img-container {
+                width: 25%;
+                height: 21%;
+            }
+
+            .profile-data-container {
+                .professional-input-label {
+                    font-size: 2vmin;
+                }
+                .professional-profile-input {
+                    width: 15vw;
+                    height: 3vh;
+                    font-size: 2vmin;
+                }
+            }
+        }
+
+        .display-text-container {
+            display: flex;
+            flex-direction: column;
+            height: 60%;
+            width: 60%;
+            margin-top: -95%;
+            margin-left: 35%;
+        }
+
+        .profile-button-container {
+            margin-top: 30%;
+            margin-left: 85%;
         }
     }
 }
