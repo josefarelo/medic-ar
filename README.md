@@ -19,6 +19,7 @@ Frontend:
 Inicio de Sesión y Perfiles: Utiliza React Router para la navegación entre páginas como el inicio de sesión y los perfiles de usuario.
 Búsqueda de Profesionales: Un formulario interactivo permite a los usuarios buscar médicos por especialidad y obra social, mostrando resultados dinámicamente en una tabla.
 Perfiles de Profesionales: Los profesionales médicos pueden gestionar su perfil, actualizando información como especialidad, obra social y dirección, almacenados en la base de datos SQLite.
+
 Backend:
 
 API RESTful: Implementada con Node.js y Express para gestionar la autenticación de usuarios mediante tokens JWT y el almacenamiento de perfiles de profesionales.

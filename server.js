@@ -79,17 +79,17 @@ app.post('/register/professional', (req, res) => {
                 return res.status(500).json({ error: 'Error al registrar el usuario profesional', details: err.message });
             }
 
-            // Obtener el último pDataId insertado en la tabla pData
-            db.get('SELECT MAX(pDataId) AS maxId FROM pData', (err, row) => {
+            // Obtener el último pId insertado en la tabla pData
+            db.get('SELECT MAX(pId) AS maxId FROM pData', (err, row) => {
                 if (err) {
-                    return res.status(500).json({ error: 'Error al obtener el último pDataId', details: err.message });
+                    return res.status(500).json({ error: 'Error al obtener el último pId', details: err.message });
                 }
-                const nextPDataId = (row.maxId || 0) + 1; // Incrementar el último pDataId en 1
+                const nextpId = (row.maxId || 0) + 1; // Incrementar el último pId en 1
 
-                // Insertar el próximo pDataId en la tabla pData
-                db.run('INSERT INTO pData (pDataId) VALUES (?)', [nextPDataId], (err) => {
+                // Insertar el próximo pId en la tabla pData
+                db.run('INSERT INTO pData (pId) VALUES (?)', [nextpId], (err) => {
                     if (err) {
-                        return res.status(500).json({ error: 'Error al registrar el pDataId en la tabla pData', details: err.message });
+                        return res.status(500).json({ error: 'Error al registrar el pId en la tabla pData', details: err.message });
                     }
                     res.json({ message: 'Usuario profesional registrado exitosamente' });
                 });

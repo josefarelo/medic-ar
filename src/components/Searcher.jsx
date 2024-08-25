@@ -6,7 +6,7 @@ const Searcher = () => {
     const [selectedSocialWork, setSelectedSocialWork] = useState('-');
     const [results, setResults] = useState([]);
 
-    const specialties = ['-', 'Cardiología', 'Obstetricia', 'Ginecología', 'Oftalmología', 'Odontología', 'Traumatología', 'Otorrinolaringología'];
+    const specialties = ['-', 'Cardiología', 'Obstetricia', 'Ginecología', 'Oftalmología', 'Odontología', 'Traumatología', 'Otorrinolaringología', 'Hematología'];
     const socialWorks = ['-','Ninguna', 'Varias', 'Osde', 'Swiss Medical', 'Galeno', 'SanCorSalud'];
 
     const search = async () => {

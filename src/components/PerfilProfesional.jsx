@@ -30,7 +30,8 @@ export default function PerfilProfesional() {
             pDataSurname: pPSurname,
             pDataSpecialty: pPSpecialty,
             pDataSocialWork: pPSocialWork,
-            pDataAddress: pPAddress
+            pDataAddress: pPAddress,
+            pDataScore: 0,
         };
 
         fetch('http://localhost:5000/save-profile', {
@@ -44,7 +45,7 @@ export default function PerfilProfesional() {
         .then(response => {
             if (response.ok) {
                 console.log('Perfil guardado exitosamente');
-                setSaveMessage('Los datos se han guardado correctamente');
+                alert('Los datos se han guardado correctamente');
             } else {
                 console.error('Error al guardar el perfil');
             }
@@ -126,7 +127,7 @@ export default function PerfilProfesional() {
                                 <option value="Osde">Osde</option>
                                 <option value="Swiss Medical">Swiss Medical</option>
                                 <option value="Galeno">Galeno</option>
-                                <option value="SanCor Salud">SanCor Salud</option>
+                                <option value="SanCorSalud">SanCor Salud</option>
                             </select>
                         </div>
                         <div>

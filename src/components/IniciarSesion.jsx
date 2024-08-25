@@ -28,7 +28,7 @@ export default function IniciarSesion() {
             if (response.ok) {
                 localStorage.setItem('token', data.token);
                 localStorage.setItem('userType', selectedRadio);
-                const redirectUrl = selectedRadio === 'nRadio' ? "/inicio" : "/inicio-profesional";
+                const redirectUrl = selectedRadio === 'nRadio' ? "/medic-ar/inicio" : "/medic-ar/inicio-profesional";
                 window.location.href = redirectUrl;
             } else {
                 alert(data.error || "El email o la contraseña ingresados son incorrectos");

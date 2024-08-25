@@ -86,6 +86,9 @@ export default function Registrarse() {
         })
         .then(data => {
             console.log(data);
+            if (data.message) {
+                alert(data.message);
+            }
         })
         .catch(error => console.error('Error:', error));
     };   
@@ -108,7 +111,12 @@ export default function Registrarse() {
             }),
         })
         .then(response => response.json())
-        .then(data => console.log(data))
+        .then(data => {
+            console.log(data)
+            if (data.message) {
+                alert(data.message);
+            }
+        })
         .catch(error => console.error('Error:', error));
     };
 
@@ -118,7 +126,7 @@ export default function Registrarse() {
         if (nPassword === nRpassword) {
             handleNUserRegister();
         }else {
-            console.error('Las contraseñas no coinciden');
+            alert('Las contraseñas no coinciden');
         }
     };
     const handlePRegisterClick = () => {
@@ -126,7 +134,7 @@ export default function Registrarse() {
         if (pPassword === pRpassword) {
             handlePUserRegister();
         }else {
-            console.error('Las contraseñas no coinciden');
+            alert('Las contraseñas no coinciden');
         }
     };
     
