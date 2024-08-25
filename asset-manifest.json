@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/medic-ar/static/css/main.e9d484ff.css",
-    "main.js": "/medic-ar/static/js/main.f62b7a34.js",
+    "main.js": "/medic-ar/static/js/main.c5781007.js",
     "static/js/453.d88de335.chunk.js": "/medic-ar/static/js/453.d88de335.chunk.js",
     "static/media/Conoce1.jpg": "/medic-ar/static/media/Conoce1.b4369130f30fcbf8a5ab.jpg",
     "static/media/imagenInicio.png": "/medic-ar/static/media/imagenInicio.a58cfdc17ed322824cb4.png",
@@ -18,11 +18,11 @@
     "static/media/logoInv.png": "/medic-ar/static/media/logoInv.00dd89cfa3c0a7bb99e5.png",
     "index.html": "/medic-ar/index.html",
     "main.e9d484ff.css.map": "/medic-ar/static/css/main.e9d484ff.css.map",
-    "main.f62b7a34.js.map": "/medic-ar/static/js/main.f62b7a34.js.map",
+    "main.c5781007.js.map": "/medic-ar/static/js/main.c5781007.js.map",
     "453.d88de335.chunk.js.map": "/medic-ar/static/js/453.d88de335.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e9d484ff.css",
-    "static/js/main.f62b7a34.js"
+    "static/js/main.c5781007.js"
   ]
 }
